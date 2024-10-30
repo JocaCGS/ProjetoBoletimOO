@@ -10,7 +10,7 @@ O sistema possui três telas principais:
 - **Cadastro de Alunos**
 - **Cadastro de Notas**
 
-Os dados dos alunos são salvos em um arquivo `arquivo_de_texto.txt`.
+Os dados dos alunos são salvos em um arquivo `informacoes_alunos.txt`.
 
 ## Telas Amigáveis
 
@@ -26,11 +26,11 @@ Todas as telas foram projetadas para serem amigáveis ao usuário, garantindo um
 
 - **Cadastro de Novos Alunos**: Tela dedicada para registrar novos alunos no sistema.
 
-- **Cadastro de Notas**: Possibilita registrar notas para um aluno utilizando um ID único (CPF).
-
-- **Interação via Botão Direito**: Permite registrar notas de um aluno selecionado com o botão direito do mouse e escolhendo a opção "Adicionar Nota" ou deletar alunos através do botão direito do mouse e escolhendo "Deletar" no aluno selecionado.
+- **Cadastro de Notas**: Possibilita registrar notas para um aluno utilizando um ID único (CPF).4
 
 - **Navegação entre Telas**: Alternância entre telas utilizando botões "Voltar".
+
+- **Interação via Botão Direito**: Permite registrar notas de um aluno selecionado com o botão direito do mouse e escolhendo a opção "Adicionar Nota", deletar alunos através do botão direito do mouse e escolhendo "Deletar" no aluno selecionado, editar dados dos alunos através do botão direito do mouse e escolhendo "Editar Dados Aluno" no aluno selecionado ou editar as notas do aluno através do botão direito do mouse e escolhendo "Editar Notas Aluno" no aluno selecionado.
 
 - **Edição de Alunos**: Possibilidade de editar informações do aluno selecionado usando o botão direito do mouse e escolhendo "Editar Aluno".
 
