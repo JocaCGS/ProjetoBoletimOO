@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="paneTelaRegistro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="789.0" style="-fx-background-color: #202124;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.colini.controllers.telaRegistrarAlunoController">
+   <children>
+      <TextField fx:id="txtfieldNome" layoutX="268.0" layoutY="121.0" prefHeight="36.0" prefWidth="253.0" promptText="Nome" />
+      <TextField fx:id="txtfieldNascimento" layoutX="266.0" layoutY="187.0" prefHeight="36.0" prefWidth="253.0" promptText="Data de Nascimento" />
+      <TextField fx:id="txtfieldCPF" layoutX="265.0" layoutY="257.0" prefHeight="36.0" prefWidth="253.0" promptText="CPF" />
+      <TextField fx:id="txtfieldEmail" layoutX="265.0" layoutY="324.0" prefHeight="36.0" prefWidth="253.0" promptText="E-mail" />
+      <Text fx:id="txtTextoRegistrarAluno" fill="WHITE" layoutX="241.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="Registrar Aluno">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnRegistrar" alignment="CENTER" layoutX="430.0" layoutY="382.0" mnemonicParsing="false" onAction="#cadastrarDados" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: #62c3ff; -fx-border-radius: 15; -fx-background-radius: 15; -fx-font-family: Roboto;" styleClass="darken-button" text="Registrar" textFill="WHITE" />
+      <Button fx:id="btnVoltar" layoutX="277.0" layoutY="382.0" mnemonicParsing="false" onAction="#telaLista" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: #303134; -fx-background-radius: 10; -fx-border-radius: 10; -fx-font-family: Roboto;" text="Voltar" textFill="WHITE" />
+      <Rectangle fx:id="rectangleCubaoAzur" arcHeight="5.0" arcWidth="5.0" fill="#62c3ff" height="18.0" layoutX="-5.0" layoutY="71.0" stroke="BLACK" strokeType="INSIDE" width="795.0" />
+      <Text fx:id="txtDigiteNome" fill="WHITE" layoutX="131.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="Digite o nome:" />
+      <Text fx:id="txtDigiteDataNascimento" fill="WHITE" layoutX="94.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="Digite a data de nascimento:" />
+      <Text fx:id="txtDigiteCPF" fill="WHITE" layoutX="130.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="Digite o CPF:" />
+      <Text fx:id="txtDigiteEmail" fill="WHITE" layoutX="130.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="Digite o E-mail:" />
+      <Text fx:id="txtGarantaQue" fill="WHITE" layoutX="566.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="Garanta que:" wrappingWidth="180.126953125">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtGarantia1" fill="WHITE" layoutX="572.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="Na data de nascimento, use a formatação __ / __ / ____" wrappingWidth="167.17578125" />
+      <Text fx:id="txtGarantia2" fill="WHITE" layoutX="572.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="No CPF, coloque um valor de 11 digitos" wrappingWidth="167.17578125" />
+      <Text fx:id="txtGarantia3" fill="WHITE" layoutX="572.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="Preencha todos os campos para registrar" wrappingWidth="167.17578125" />
+      <Button fx:id="btnFechar" layoutX="763.0" layoutY="3.0" mnemonicParsing="false" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #303134; -fx-font-family: Roboto;" text="X" textFill="WHITE" />
+      <Text fx:id="txtGarantia4" fill="WHITE" layoutX="572.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="Não contenha acentuação" wrappingWidth="167.17578125" />
+   </children>
+</Pane>
