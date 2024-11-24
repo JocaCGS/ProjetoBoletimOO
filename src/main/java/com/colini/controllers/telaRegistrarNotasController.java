@@ -100,26 +100,19 @@ public class telaRegistrarNotasController {
     
     public void escreveArquivoNotas(String nota1Texto, String  nota2Texto, String  nota3Texto, String  nota4Texto) {
         try {
-            // Le todas as linhas do arquivo e toda vez que quebra linha adiciona como index na lista
-            // Mesma coisa do fileReader, so que ao em vez de declarar tudo, ele so puxa um: arquivo do caminho tal, e atribui a lista.
         List<String> list = Files.readAllLines(Paths.get(caminho));
 
-        // Cara desenvolver a logica eh mole fazer que eh brabo (eu conversei com o professsor de fazer isso abaixo mas n tinha ideia do que fazer e olha o que o gpt me faz)
-        
         // Encontra a linha correspondente ao CPF
-        for (int i = 0; i < list.size(); i++) { // Coleta o index
-            String linha = list.get(i); // Atribui a linha do index atual à "linha"
-            String[] datablock = linha.split(", "); // Separa o conteudo da linha em blocos, que sao atribuidos ao vetor "datablock"
-            if (datablock.length > 2 && datablock[2].equals(cpfAluno)) { // Se o vetor "datablock" tiver tamanho maior que 2, isso significa que o aluno possui um cpf para comparar com "cpfAluno"
-                // Concatena as notas à "linha" uma string "updatedLine"
+        for (int i = 0; i < list.size(); i++) {
+            String linha = list.get(i);
+            String[] datablock = linha.split(", "); 
+            if (datablock.length > 2 && datablock[2].equals(cpfAluno)) { // se atingir a condicao, salva no fim do aluno no qual o CPF eh o mesmo
                 String updatedLine = linha + ", " + nota1Texto + ", " + nota2Texto + ", " + nota3Texto + ", " + nota4Texto;
-                list.set(i, updatedLine); // Altera o index antigo para a linha contida em "updatedLine"
-                break; // Para de procurar depois de encontrar o aluno
+                list.set(i, updatedLine); 
+                break; 
             }
         }
-        //slk programando em hieroglifos
-
-        
+       
         // Escreve novamente todas as linhas no arquivo
         Files.write(Paths.get(caminho), list);
         
@@ -129,7 +122,7 @@ public class telaRegistrarNotasController {
     }
 
     public void cadastrarDados() {
-        String nota1Texto = txtfieldNota1.getText().replace(',', '.'); // Troca a vírgula pelo ponto olha que fofo essa .replace
+        String nota1Texto = txtfieldNota1.getText().replace(',', '.'); // Troca a vírgula pelo ponto
         String nota2Texto = txtfieldNota2.getText().replace(',', '.');
         String nota3Texto = txtfieldNota3.getText().replace(',', '.');
         String nota4Texto = txtfieldNota4.getText().replace(',', '.');
